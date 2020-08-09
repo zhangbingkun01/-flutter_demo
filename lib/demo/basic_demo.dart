@@ -98,8 +98,8 @@ class TextDemo extends StatelessWidget {
     fontSize: 16.0,
   );
 
-  final String _author = '李白';
-  final String _title = '将进酒';
+  // final String _author = '李白';
+  // final String _title = '将进酒';
 
   @override
   Widget build(BuildContext context) {
