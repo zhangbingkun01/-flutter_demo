@@ -6,8 +6,9 @@ import './demo/draw_demo.dart';
 import './demo/bottom_navigitionbar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
-import './demo/view_demo.dart';
+// import './demo/view_demo.dart';
 import './demo/sliver_demo.dart';
+import './demo/navigator_demo.dart';
 
 void main() => runApp(App());
 
@@ -16,7 +17,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: NavigatorDemo(),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => Home(),
+        '/about': (context) => Pagee(title: 'About',),
+      },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -58,7 +64,7 @@ class Home extends StatelessWidget {
                 icon: Icon(Icons.directions_bike),
               ),
               Tab(
-                icon: Icon(Icons.view_quilt ),
+                icon: Icon(Icons.view_quilt),
               ),
             ],
           ),
